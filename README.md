@@ -9,3 +9,16 @@ This project will set up infrastructure on AWS to allow developers to deploy the
 # Architecture
 
 <img src="https://github.com/thiagonache/continuous-delivery/blob/master/CI_CD%20platform%20-%20Page%201.png">
+
+# Bootstraping
+1. Clone repo
+```
+$ git clone https://github.com/thiagonache/continuous-delivery/
+```
+
+1. Apply changes
+```
+$ terraform init
+$ terraform plan
+$ terraform apply
+```
