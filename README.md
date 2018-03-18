@@ -12,6 +12,7 @@ This project will set up infrastructure on AWS to allow developers to deploy the
 # Bootstraping
 Note: Automation in progess. I will keep files here just for reference, but please, ignore them.
 
+1. Create a new ECR repo
 1. Create new pipeline <a href="https://console.aws.amazon.com/codepipeline/home?region=us-east-1#/create">here</a>
 1. Set Pipeline name.
 Eg.: PHP-Pipeline-Sample
@@ -28,7 +29,7 @@ Eg.: PHP-Build-Sample
 ```
 AWS_DEFAULT_REGION
 AWS_ACCOUNT_ID
-IMAGE_REPO_NAME (variable name is upper case and variable value must be lower case)
+IMAGE_REPO_NAME (variable name is upper case and variable value must be lower case, the same as ECR repo)
 ```
 1. Click on Save build project
 1. Click on next step
