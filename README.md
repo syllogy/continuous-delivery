@@ -35,7 +35,7 @@ Eg.: PHP-Build-Sample
 Immediately we should see your pipeline running.
 
 
-## Terraform further reference
+## Terraform further reference (not complete. under construction)
 ```
 $ git clone https://github.com/thiagonache/continuous-delivery/
 ```
