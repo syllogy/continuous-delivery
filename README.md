@@ -3,6 +3,7 @@ This project will set up infrastructure on AWS to allow developers to deploy the
 
 # Requirements
 * aws account
+* basic knowlodge of IAM
 
 # Architecture
 
@@ -23,6 +24,12 @@ Eg.: PHP-Pipeline-Sample
 Eg.: PHP-Build-Sample
 1. On Environment: How to build, select Use an image managed by AWS CodeBuild for Environment image
 1. Select operating system as ubuntu, Runtime docker and Version aws/codebuild/docker:17.09.0
+1. Add three environment variables (case sensitive):
+```
+AWS_DEFAULT_REGION
+AWS_ACCOUNT_ID
+IMAGE_REPO_NAME
+```
 1. Click on Save build project
 1. Click on next step
 1. Select No deployment for deploy (we are going to skip this step for now and the deployment will be added further).
@@ -30,8 +37,8 @@ Eg.: PHP-Build-Sample
 1. Click on create role
 1. Click on allow
 1. Click on next step
-1. And finally click on Create pipeline
-
+1. Click on Create pipeline
+1. Update Service Role created via wizard by attaching AmazonEC2ContainerRegistryPowerUser to the role
 Immediately we should see your pipeline running.
 
 
