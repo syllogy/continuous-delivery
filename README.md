@@ -8,4 +8,4 @@ This project will set up infrastructure on AWS to allow developers to deploy the
 
 # Architecture
 
-https://github.com/thiagonache/continuous-delivery/blob/master/CI_CD%20platform%20-%20Page%201.png
+<img src="https://github.com/thiagonache/continuous-delivery/blob/master/CI_CD%20platform%20-%20Page%201.png">
