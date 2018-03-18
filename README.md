@@ -28,7 +28,7 @@ Eg.: PHP-Build-Sample
 ```
 AWS_DEFAULT_REGION
 AWS_ACCOUNT_ID
-IMAGE_REPO_NAME
+IMAGE_REPO_NAME (variable name is upper case and variable value must be lower case)
 ```
 1. Click on Save build project
 1. Click on next step
