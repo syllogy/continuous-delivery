@@ -2,18 +2,47 @@
 This project will set up infrastructure on AWS to allow developers to deploy their application automatically.
 
 # Requirements
-* terraform
-* aws cli configured
-* github token (<a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">details</a>)
+* aws account
 
 # Architecture
 
 <img src="https://github.com/thiagonache/continuous-delivery/blob/master/CI_CD%20platform%20-%20Page%201.png">
 
 # Bootstraping
-1. Clone repo
+Note: Automation in progess. I will keep files here just for reference, but please, ignore them.
+
+1. Create new pipeline <a href="https://console.aws.amazon.com/codepipeline/home?region=us-east-1#/create">here</a>
+1. Set Pipeline name.
+Eg.: PHP-Pipeline-Sample
+1. Select Github as Source provider and click on Connect to Github button.
+1. Select repository thiagonache/testphp-app and master branch
+1. Click on next step.
+1. Select AWS Code Build as Build provider
+1. Click on Create a new build project
+1. Set project name.
+Eg.: PHP-Build-Sample
+1. On Environment: How to build, select Use an image managed by AWS CodeBuild for Environment image
+1. Select operating system as ubuntu, Runtime docker and Version aws/codebuild/docker:17.09.0
+1. Click on Save build project
+1. Click on next step
+1. Select No deployment for deploy (we are going to skip this step for now and the deployment will be added further).
+1. Click on next step
+1. Click on create role
+1. Click on allow
+1. Click on next step
+1. And finally click on Create pipeline
+
+Immediately we should see your pipeline running.
+
+
+## Terraform further reference
 ```
 $ git clone https://github.com/thiagonache/continuous-delivery/
+```
+
+1. Set github token
+```
+$ export GITHUB_TOKEN=XXXXXXXXXXX
 ```
 
 1. Apply changes
